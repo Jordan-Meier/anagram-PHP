@@ -15,7 +15,6 @@
     $app->get("/anagram", function() use ($app) {
         $my_Anagram = new Anagram;
         $word_list = explode(', ', $_GET['list']);
-        var_dump ($word_list);
         $result = $my_Anagram->anagramCheckCompare($_GET['word'], $word_list);
 
 

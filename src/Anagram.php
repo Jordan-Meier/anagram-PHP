@@ -23,12 +23,14 @@
                 $split_word = $this->anagramCheckSort($word);
                 if ($split_word == $single_word) {
                     array_push($matching_words, $word);
+                } else {
+                    if (array_intersect($single_word, $split_word) == $single_word) {
+                        array_push($matching_words, $word);
+                    }
                 }
             }
             return $matching_words;
-
         }
-
     }
 
 ?>

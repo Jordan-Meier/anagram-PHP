@@ -46,6 +46,21 @@
             //Assert
             $this->assertEquals(array("beard", "bared", "debra"), $result);
         }
+        function test_anagramCheckCompare_partial()
+        {
+            //Arrange
+            $test_Anagram = new Anagram;
+            $input1 = "brad";
+            $input2 = array("beard", "bird", "apple", "bared", "debra");
+
+            //Act
+            $result = $test_Anagram->anagramCheckCompare($input1, $input2);
+
+
+            //Assert
+            $this->assertEquals(array("beard", "bared", "debra"), $result);
+        }
+
     }
 
 ?>
