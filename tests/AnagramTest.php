@@ -30,21 +30,21 @@
 
 
             //Assert
-            $this->assertEquals(true, $result);
+            $this->assertEquals(array("a","b","d","e","r"), $result);
         }
         function test_anagramCheckCompare()
         {
             //Arrange
             $test_Anagram = new Anagram;
             $input1 = "bread";
-            $input2 = array("beard", "bird", "apple");
+            $input2 = array("beard", "bird", "apple", "bared", "debra");
 
             //Act
             $result = $test_Anagram->anagramCheckCompare($input1, $input2);
 
 
             //Assert
-            $this->assertEquals("beard", $result);
+            $this->assertEquals(array("beard", "bared", "debra"), $result);
         }
     }
 
