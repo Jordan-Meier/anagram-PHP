@@ -19,6 +19,17 @@
                 </div>
                 <button class="btn btn-success" type="submit">Find the Anagrams!</button>
             </form>
+
+            <div class="well">
+                <p>
+                    The following words are anagrams:
+                    <ul>
+                        {% for result in results %}
+                            <li>{{ result }}</li>
+                        {% endfor %}
+                    </ul>
+                </p>
+            </div>
         </div>
     </body>
 </html>

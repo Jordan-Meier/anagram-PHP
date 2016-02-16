@@ -22,10 +22,8 @@
             foreach ($word_array as $word) {
                 $split_word = $this->anagramCheckSort($word);
                 if ($split_word == $single_word) {
-
                     array_push($matching_words, $word);
                 }
-
             }
             return $matching_words;
 
