@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    {% include '/includes/head.html.twig' %}
+    <body>
+        <div class="container">
+            <h1>Anagram</h1>
+            <p>
+                Input a single word to compare against a list of inputted words (separated by commas) in order to see if any of them are anagrams of the single word.
+            </p>
+            <form action="/anagram">
+                <div class="form-group">
+                    <label for="word">Enter single word</label>
+                    <input type="text" id="word" name="word" class='form-control'><br>
+                </div>
+                <div class="form-group">
+                    <label for="list">Enter a list of words</label>
+                    <input type="text" id="list" name="list" class='form-control'><br>
+
+                </div>
+                <button class="btn btn-success" type="submit">Find the Anagrams!</button>
+            </form>
+        </div>
+    </body>
+</html>
